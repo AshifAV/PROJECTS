@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZMM_GRN_PROCESS_SRV_01" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="PODetails" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PurchaseOrd"/>
+                </Key>
+                <Property Name="PurchaseOrd" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="PurchaseOrd" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ItemNo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ItemNo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EanNo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Eanno" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ArticleCode" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ArticleCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ArticleDesc" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ArticleDesc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Quantity" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UOM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="UOM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StorageLoc" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="StorageLoc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProdDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ProdDt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ExpriyDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ExpriyDt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FOC" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="FreeItemCheck" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FLAG" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="prd date flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Base_Qty" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="BaseQty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Base_Uom" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="BaseUom" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PoQty" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="PoQty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Noitems" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="NoofItems" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetPrice" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="NetPrice" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GrnQty" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="GrnQty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StoInd" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="StoInd" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="PurchaseOrderNo" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PONO"/>
+                </Key>
+                <Property Name="PONO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="PurchaseOrder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="REF" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Reference" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ItemNo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ItemNo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EanNo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="EanNo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ArticleCode" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ArticleCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ArticleDesc" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ArticleDescription" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Quantity" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UOM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="UOM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StorageLoc" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="StorageLoc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProdDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ProdDate" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ExpiryDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ExpiryDate" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FOC" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="FreeItemCheck" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FLAG" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Flag for PrdDt Check" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="matdoc" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="MatDocNo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Base_Qty" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Base_Qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Base_Uom" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Base_Uom" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StoInd" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="STO Ind" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="NP_ON_EBELN" Relationship="ZMM_GRN_PROCESS_SRV_01.Header_to_Item" FromRole="FromRole_Header_to_Item" ToRole="ToRole_Header_to_Item"/>
+            </EntityType>
+            <Association Name="Header_to_Item" sap:content-version="1">
+                <End Type="ZMM_GRN_PROCESS_SRV_01.PurchaseOrderNo" Multiplicity="1" Role="FromRole_Header_to_Item"/>
+                <End Type="ZMM_GRN_PROCESS_SRV_01.PODetails" Multiplicity="*" Role="ToRole_Header_to_Item"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Header_to_Item">
+                        <PropertyRef Name="PONO"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Header_to_Item">
+                        <PropertyRef Name="PurchaseOrd"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZMM_GRN_PROCESS_SRV_01_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="PODetailsSet" EntityType="ZMM_GRN_PROCESS_SRV_01.PODetails" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="PurchaseOrderNoSet" EntityType="ZMM_GRN_PROCESS_SRV_01.PurchaseOrderNo" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="Header_to_Item_AssocSet" Association="ZMM_GRN_PROCESS_SRV_01.Header_to_Item" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="PurchaseOrderNoSet" Role="FromRole_Header_to_Item"/>
+                    <End EntitySet="PODetailsSet" Role="ToRole_Header_to_Item"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://ui5.jaleelholdings.com:8000/sap/opu/odata/sap/ZMM_GRN_PROCESS_SRV_01/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://ui5.jaleelholdings.com:8000/sap/opu/odata/sap/ZMM_GRN_PROCESS_SRV_01/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,113 @@
+.boldLabel {
+    font-weight: bold;
+}
+
+.sapMCbBg {
+    left: 0.8125rem;
+    top: 0.4rem;
+    height: 0.rem;
+    width: 1.125rem;
+    line-height: 1.1rem;
+}
+
+.storLoc.sapMInputBaseInner {
+    color: #000000;
+    background: #ffffff;
+    /*border: 1px solid #bfbfbf;*/
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    height: 1.5rem;
+    padding: 0 0.75rem;
+}
+
+.storLoc.sapMInputBase {
+    height: 1.5rem;
+}
+
+.eanNo.sapMInputBaseInner {
+    color: #000000;
+    background: #ffffff;
+    /*border: 1px solid #bfbfbf;*/
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    height: 1.5rem;
+    padding: 0 0.75rem;
+}
+
+.eanNo.sapMInputBase {
+    height: 1.5rem;
+}
+
+.qua.sapMInputBaseInner {
+    color: #000000;
+    background: #ffffff;
+    /*border: 1px solid #bfbfbf;*/
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    height: 1.5rem;
+    padding: 0 0.75rem;
+}
+
+.qua.sapMInputBase {
+    height: 1.5rem;
+}
+
+.uo.sapMInputBaseInner {
+    color: #000000;
+    background: #ffffff;
+    /*border: 1px solid #bfbfbf;*/
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    height: 1.5rem;
+    padding: 0 0.75rem;
+}
+
+.uo.sapMInputBase {
+    height: 1.5rem;
+}
+
+.prodt.sapMInputBaseInner {
+    color: #000000;
+    background: #ffffff;
+    /*border: 1px solid #bfbfbf;*/
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    height: 1.5rem;
+    padding: 0 0.75rem;
+}
+
+.prodt.sapMInputBase {
+    height: 1.5rem;
+}
+
+.expdt.sapMInputBaseInner {
+    color: #000000;
+    background: #ffffff;
+    /*border: 1px solid #bfbfbf;*/
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    height: 1.5rem;
+    padding: 0 0.75rem;
+}
+
+.expdt.sapMInputBase {
+    height: 1.5rem;
+}
+
+.myAppDemoWT .scanBtn .sapMBtnInner {
+    height: 2.4rem;
+}
+
+.sapMBtnIcon {
+    line-height: 1.5rem;
+}
+
+.sapMInputBaseIcon {
+    line-height: 1.5rem;
+}

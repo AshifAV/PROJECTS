@@ -1,0 +1,105 @@
+{
+    "_version": "1.8.0",
+    "sap.app": {
+        "id": "com.jaleel.grn",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/ZMM_GRN_PROCESS_SRV_01",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            }
+        },
+        "sourceTemplate": {
+            "id": "@sap/ux-app-migrator:freestyle",
+            "version": "1.14.0",
+            "toolsId": "1ec2efc5-1c4e-4b65-b3a7-c11ab2135a89"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "com.jaleel.grn.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "app"
+        },
+        "dependencies": {
+            "minUI5Version": "1.71.69",
+            "libs": {
+                "sap.m": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.jaleel.grn.i18n.i18n",
+                    "supportedLocales": [
+                        ""
+                    ],
+                    "fallbackLocale": ""
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "com.jaleel.grn.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "apphome",
+                    "target": "apphome"
+                },
+                {
+                    "pattern": "grnpo/{poNumber},{REF},{docType}:?parameters:",
+                    "name": "grnpo",
+                    "target": "grnpo"
+                }
+            ],
+            "targets": {
+                "apphome": {
+                    "viewId": "apphome",
+                    "viewName": "Apphome"
+                },
+                "grnpo": {
+                    "viewId": "grnpo",
+                    "viewName": "Grnpo"
+                }
+            }
+        }
+    }
+}

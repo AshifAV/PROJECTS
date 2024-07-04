@@ -1,0 +1,124 @@
+<mvc:View controllerName="com.jaleel.grn.controller.Grnpo"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form" id="grnpo">
+	<App class="myAppDemoWT">
+		<pages>
+			<Page title="{i18n>grnPageTitle}">
+				<content>
+					<form:SimpleForm title="Item Information" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1">
+						<Label text="EAN NO" required="true" design="Bold"/>
+						<Input value="" id="inp_ean" width="200px" maxLength="18" change="validateItem" class="eanNo"/>
+						<Text text="" id="inp_item" class=" sapThemeHighlight-asColor txt_item"/>
+						<Text text="" id="inp_desc" class=" sapThemeHighlight-asColor txt_desc"/>
+						<!-- <Label text="Storage Location" required="true" design="Bold"  /> -->
+						<Text text="" id="inp_sl" class=" sapThemeHighlight-asColor txt_item"/>
+						<Label/>
+						<Text text="" id="inp_np" class=" sapThemeHighlight-asColor txt_item"/>
+						
+						<!-- <Text text="" id="inp_maxquant" class=" sapThemeHighlight-asColor txt_desc"/> -->
+						<!-- <Text text="" id="inp_sl" class=" sapThemeHighlight-asColor txt_desc"/> -->
+						<Label text="Quantity" required="true" design="Bold"/>
+						<HBox width="100%" fitContainer="true" alignItems="Center" justifyContent="Start">
+							<Input value="" id="inp_qty" width="200px" maxLength="18" class="qua" visible="true" change = "focus"/>
+							<!-- <Label text="UOM" required="true" design="Bold"/> -->
+							
+							<!-- <Text text="" id="inp_uom" class=" sapThemeHighlight-asColor txt_desc"/> -->
+						</HBox>
+						<Text text="" id="inp_uom" width="60px"  class="uo"/>
+
+						<!-- <Label text='Max Quantity' class="sapUiSmallMarginEnd" design="Bold"/>
+						<HBox width="100%" fitContainer="true" alignItems="Center" justifyContent="Start">
+							<Text text="" id="inp_maxquant" width="100px" class=" sapThemeHighlight-asColor txt_desc"/>
+							<Text text="" id="inp_uom" width="60px"  class="uo"/>
+						</HBox> -->
+<!-- 
+						<FlexBox alignItems="Start">
+						<Label text='Max Quantity' class="sapUiSmallMarginEnd" design="Bold">
+						<layoutData>
+						<FlexItemData growFactor='1'></FlexItemData>
+						</layoutData>
+						</Label> -->
+						<!-- <Text text="" id="inp_maxquant" class=" sapThemeHighlight-asColor txt_desc"/> -->
+						
+						<!-- </FlexBox> -->
+						<!-- <Text text="" id="inp_maxquant" width="100px"  class="qua" visible="true"/> -->
+						<!-- <Text text="Hi"  width="50px"  class="qua" visible="true"/> -->
+						<Label text="Production Date" required="true" design="Bold"/>
+						<DatePicker id="inp_pd" width="200px" class="prodt" visible="{UIState>/visible}"/>
+						<!--<Input value="" id="inp_pd" width="200px" maxLength="18"/>-->
+						<Label text="Expiry Date" required="true" design="Bold"/>
+						<DatePicker id="inp_ed" width="200px" class="expdt" visible="{UIState>/visible}"/>
+						<Label/>
+						<CheckBox class="chck" text="FOC" id="inp_foc"/>
+						<!--<Input value="" id="inp_ed" width="200px" maxLength="18"/>-->
+						<Label/>
+						<Button text="Add Item" press="onAddItem" icon="sap-icon://add-product" type="Emphasized" width="200px" id = "btn"/>
+					</form:SimpleForm>
+				</content>
+				<ScrollContainer id="idscrollcont" horizontal="true" vertical="true" width="100%" height="50%" visible="true">
+					<Table id="idtb" inset="false" items="{/data}" visible="false" class="sapUiSizeCompact" itemPress="onItemPress" mode="MultiSelect">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="Item Details" level="H2"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="5em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Item Number"/>
+							</Column>
+							<Column width="5em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Article Code"/>
+							</Column>
+							<Column width="14em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Item Name"/>
+							</Column>
+							<Column width="5em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="UOM"/>
+							</Column>
+							<Column width="5em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Quantity"/>
+							</Column>
+							<Column width="8em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Production Date"/>
+							</Column>
+							<Column width="8em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Expiry Date"/>
+							</Column >
+							<Column width="5em" minScreenWidth="Tablet" demandPopin="true">
+								<Text text="FOC"/>
+							</Column >
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{ItemNo}"/>
+									<Text text="{Item}"/>
+									<Text text="{Desc}"/>
+									<!-- <Text text="{UR}"/> -->
+									<Text text="{UOM}"/>
+									<Text text="{Qty}"/>
+									<Text text="{Pdate}"/>
+									<Text text="{Edate}"/>
+									<Text text="{Foc}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</ScrollContainer>
+				<footer>
+					<Bar>
+						<contentRight>
+							<Button text="Clear" icon="sap-icon://reset" press="onClear" type="Reject"/>
+							<Button text="Submit" icon="sap-icon://save" press="onSubmit" type="Accept" id="sbtbtn" visible="true"/>
+						</contentRight>
+						<contentLeft>
+							<Button icon="sap-icon://delete" tooltip="Delete Items" type="Reject" press="deleteRow"/>
+							<Button icon="sap-icon://sys-back-2" class="sapUiSmallMarginBegin" press="onNavBack" type="Reject" text="Back "/>
+						</contentLeft>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
